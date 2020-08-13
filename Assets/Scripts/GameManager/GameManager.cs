@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Behaviour")]
     [HideInInspector] public float gameTime = 1;
     [HideInInspector] public bool endGame;
+    [HideInInspector] public bool victory;
 
 
     void Awake()
@@ -28,10 +29,12 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void EndGame()
+    public void EndGame(bool playerWon)
     {
         endGame = true;
+        victory = playerWon;
         SpawnManager.Instance.spawnAble = false;
+        SpawnManager.Instance.DestroyerAllEnemy();
         gameTime = 0;
     }
 
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
         ship.GetComponent<ShipController>().EnebleMesh(true);
         SpawnManager.Instance.DestroyerAllEnemy();
         SpawnManager.Instance.spawnAble = true;
+        UIManager.Instance.resetUI();
         gameTime = 1;
     }
 }
