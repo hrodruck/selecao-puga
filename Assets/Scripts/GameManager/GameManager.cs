@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         SpawnManager.Instance.DestroyerAllEnemy();
         SpawnManager.Instance.spawnAble = true;
         UIManager.Instance.resetUI();
+        CurrencyManager.Instance.totalCurrencys = 0;
         gameTime = 1;
     }
 }

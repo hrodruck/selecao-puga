@@ -11,7 +11,7 @@ public class EnemysBehavior : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] EnemysType enemyType;
-    [SerializeField] protected List<EnemysStatus> status;
+    [SerializeField] protected List<ShipStatus> status;
     [SerializeField] protected int level = 1;
     [SerializeField] protected int myCurrencyToDrop;
     [SerializeField] protected float MaxDistanceToDrop;
@@ -36,7 +36,8 @@ public class EnemysBehavior : MonoBehaviour
 
         switch (enemyType)
         {
-            case EnemysType.SUICIDE:
+            case 
+            EnemysType.SUICIDE:
                 walk = true;
                 fire = false;
                 rechargFire = false;
