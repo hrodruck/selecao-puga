@@ -63,7 +63,7 @@ public class MelleRushBehavior : EnemysBehavior
 
     void ReleaseRush()
     {
-        this.agent.Stop();
+        this.agent.isStopped = true;
         this.agent.speed = status[level - 1].movimentSpeed ;
         this.agent.acceleration = normalIncrementSpeed;
         rushOn = false;

@@ -15,6 +15,7 @@ public enum EnemysType
     TOWER_FIRE,
     TOWER_RANGE,
     TOWER_ROCKET,
+    STAY_SAFE
 }
 
 

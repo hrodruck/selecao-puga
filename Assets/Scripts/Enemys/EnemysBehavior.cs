@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class EnemysBehavior : MonoBehaviour
 {
@@ -218,12 +219,33 @@ public class EnemysBehavior : MonoBehaviour
                 status[level - 1].stunTime = 0;
 
                 break;
+            case EnemysType.STAY_SAFE:
+                walk = true;
+                fire = true;
+                rechargFire = true;
+                meleeAttack = false;
+                rangeAttack = true;
+                suicide = false;
+                playerToTarget = true;
+                shield = false;
+                rechargShield = false;
+                stun = false;
+
+                status[level - 1].meleeDamage = 0;
+                status[level - 1].meleeAttackTime = 0;
+                status[level - 1].meleeAttackDelay = 0;
+                status[level - 1].shieldResistence = 0;
+                status[level - 1].shieldRechargTime = 0;
+                status[level - 1].stunTime = 0;
+
+                break;
         }
     }
 
 
     protected void MoveToShip()
     {
+        print(shipTransform.position);
         agent.SetDestination(shipTransform.position);
     }
 
@@ -256,7 +278,7 @@ public class EnemysBehavior : MonoBehaviour
     {
         SpawnManager.Instance.currentEnemys--;
 
-        int chance = Random.Range(0, 101);
+        int chance = UnityEngine.Random.Range(0, 101);
         if (chance >= 100 - (int)(0.7f * 100))
         {
             if (energ != null)
@@ -297,14 +319,14 @@ public class EnemysBehavior : MonoBehaviour
     {
         for (int i = 0; i < coinsToDrop; i++)
         {
-            Vector3 RandomLocal = new Vector3(transform.position.x + Random.Range(0f, MaxDistanceToDrop), transform.position.y, transform.position.z + Random.Range(0f, MaxDistanceToDrop));
+            Vector3 RandomLocal = new Vector3(transform.position.x + UnityEngine.Random.Range(0f, MaxDistanceToDrop), transform.position.y, transform.position.z + UnityEngine.Random.Range(0f, MaxDistanceToDrop));
             GameObject coin = (GameObject)Instantiate(CurrencyManager.Instance.coinMesh, RandomLocal, Quaternion.identity);
             coin.GetComponent<CurrencyBehaviour>().SetValue(CurrencyManager.Instance.maxCountForCurrencys);
         }
 
         if (rest)
         {
-            Vector3 RandomLocal = new Vector3(transform.position.x + Random.Range(0f, MaxDistanceToDrop), transform.position.y, transform.position.z + Random.Range(0f, MaxDistanceToDrop));
+            Vector3 RandomLocal = new Vector3(transform.position.x + UnityEngine.Random.Range(0f, MaxDistanceToDrop), transform.position.y, transform.position.z + UnityEngine.Random.Range(0f, MaxDistanceToDrop));
             GameObject coin = (GameObject)Instantiate(CurrencyManager.Instance.coinMesh, RandomLocal, Quaternion.identity);
             coin.GetComponent<CurrencyBehaviour>().SetValue(restValue);
         }
