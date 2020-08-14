@@ -12,6 +12,13 @@ Tarefa 4: O fluxo é feito a partir do Scene Manager, script separado em objeto 
 
 Tarefa 5: Foi utilizada a classe PlayerPrefs. A quantidade de moedas é salva a cada fim de jogo (quer seja vitória ou derrota), mas não durante o jogo. Isto é, se o jogador fechar o jogo no meio, suas moedas não serão contabilizadas. Acredito que seja comportamento esperado.
 
+Pontos de destaque:
+
+A tela e a UI se ajustam bem a várias resoluções, para dar suporte à futura versão Android. Assumi que seria usado o formato landscape quando fiz a tela de Home.
+Corrigido o bug prévio que impedia o jogador de morrer sob stun
+Toda a navegação utiliza botões já cadastrados nas configurações de Input, e não o mouse, para maior suporte a joystick
 
 
-Qualquer ajuste ou má compreensão minha, peço que me retorne em hrodruck@gmail.com antes do prazo de 48 horas!
+Qualquer ajuste ou má compreensão minha, peço que me retorne em hrodruck@gmail.com
+
+
