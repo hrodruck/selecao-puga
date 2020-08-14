@@ -14,7 +14,7 @@ public class RocketDrone : DroneBehavior
 
     [Header("Behaviour")]
     GameObject target;
-    List<GameObject> enemys;
+    List<GameObject> enemys = new List<GameObject>();
     float TimeToShoot;
     float currentTimeToShoot;
 

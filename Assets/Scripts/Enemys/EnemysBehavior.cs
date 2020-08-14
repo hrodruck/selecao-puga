@@ -246,7 +246,6 @@ public class EnemysBehavior : MonoBehaviour
 
     protected void MoveToShip()
     {
-        print(shipTransform.position);
         agent.SetDestination(shipTransform.position);
     }
 
