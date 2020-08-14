@@ -122,13 +122,14 @@ public class ShipController : Status
                 else if (currentslowMotionTime < slowMotionMaxTime)
                 {
                     RechargSlowMotion();
-                }
+                }   
+            }
+            
+            if (this.allStatus[healthLevel - 1].health <= 0)
+            {
 
-                if (this.allStatus[healthLevel - 1].health <= 0)
-                {
-                    EnebleMesh(false);
-                    GameManager.Instance.EndGame(false);
-                }
+                EnebleMesh(false);
+                GameManager.Instance.EndGame(false);
             }
         }
     }

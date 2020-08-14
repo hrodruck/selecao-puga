@@ -39,6 +39,15 @@ public class GameManager : MonoBehaviour
         victory = playerWon;
         SpawnManager.Instance.spawnAble = false;
         SpawnManager.Instance.DestroyerAllEnemy();
+        if (!PlayerPrefs.HasKey("coins"))
+        {
+            PlayerPrefs.SetInt("coins", CurrencyManager.Instance.totalCurrencys);
+        }
+        else
+        {
+            int oldCoins = PlayerPrefs.GetInt("coins", CurrencyManager.Instance.totalCurrencys);
+            PlayerPrefs.SetInt("coins", CurrencyManager.Instance.totalCurrencys+oldCoins);
+        }
         gameTime = 0;
     }
 
