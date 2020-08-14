@@ -2,11 +2,11 @@ Projeto de teste feito como parte da seleção para PUGA studios
 
 
 
-Tarefa 1: As funcionalidades foram adicionadas em UI Manager, o qual é componente de Managers na cena Test. O parâmetro Time to Win define o tempo da partida
+Tarefa 1: As funcionalidades foram adicionadas em UI Manager, o qual é componente de Managers na cena Test. O parâmetro Time to Win define o tempo da partida.
 
-Tarefa 2: O novo inimigo se chama STAY_SAFE. Seu comportamento é de se manter distanciado do jogador e atirar. Ele não dá dano, assim como alguns outros inimigos. Creio que seja bug na parte do código recebido responsável pelo dano dos inimigos.
+Tarefa 2: O novo inimigo se chama STAY_SAFE. Seu comportamento é de se manter distanciado do jogador e atirar. Ele não dá dano, assim como alguns outros dos nove inimigos pré-prontos. Creio que seja bug na parte do código recebido que trata do dano dos inimigos.
 
-Tarefa 3: A definição do Scriptable Object se encontra na pasta "Assets/Scripts/Scriptable Objects". Se chama Ship Status.
+Tarefa 3: A definição do Scriptable Object se encontra na pasta "Assets/Scripts/Scriptable Objects". Se chama ShipStatus.
 
 Tarefa 4: O fluxo é feito a partir do Scene Manager, script separado em objeto vazio (por conta do DontDestroyOnLoad)
 
