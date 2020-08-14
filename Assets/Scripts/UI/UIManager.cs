@@ -63,12 +63,12 @@ public class UIManager : MonoBehaviour
             if (GameManager.Instance.victory)
             {
                 gameOverText.color = Color.green;
-                gameOverText.text = "You won! Press Cancel (ESC) to go again!";
+                gameOverText.text = "You won! Press Cancel (ESC) to go again! Or Submit (ENTER) to go to home screen!";
             }
             else
             {
                 gameOverText.color = Color.red;
-                gameOverText.text = "You lost! Press Cancel (ESC) to try again...";
+                gameOverText.text = "You lost! Press Cancel (ESC) to try again... Or Submit (ENTER) to go to home screen";
             }
         }else
         {

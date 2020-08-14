@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButton("Cancel") && endGame)
             RestatGame();
+        else if (Input.GetButton("Submit") && endGame)
+        {
+            SceneManager.Instance.resetToHome();
+        }
     }
 
 
